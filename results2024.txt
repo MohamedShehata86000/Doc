@@ -16987,3 +16987,7 @@ AllDone2024finetooooo
 تقديرك: ممتاز|Excellent
 المعلوماتية فى التمريض||
 ********************
+
+{message}
+{StdName}
+الدرجة الخاصة بك: {Degree}
