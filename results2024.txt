@@ -16991,3 +16991,7 @@ AllDone2024finetooooo
 {message}
 {StdName}
 الدرجة الخاصة بك: {Degree}
+
+{message}
+{StdName}
+الدرجة الخاصة بك: {Degree}
