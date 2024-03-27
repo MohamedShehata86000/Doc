@@ -80,7 +80,7 @@ from threading import Thread as t
 
  
 while True:
-	for i in range(35):
+	for i in range(12):
 		t(args="",target=send_order).start()
 #	send_order()	
 #	threading.Thread(target=send_order,args=[]).start()
