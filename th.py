@@ -74,8 +74,8 @@ def send_order():
             bot1.send_message(id1, message,parse_mode='markdownV2')
             print("done successfully")
             
-    except :
-         print(f"wrong number : {num}")
+    except :pass
+         #print(f"wrong number : {num}")
 from threading import Thread as t
 
  
