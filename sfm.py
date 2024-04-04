@@ -1,30 +1,13 @@
 #--------- modules - المكاتب ---------#
 
 from rich.panel import Panel as nel;from rich import print as cetak;import websocket;import ssl;import os;import json;import gzip;import requests;import random;import concurrent.futures
-import subprocess
-
-def clear_terminal():
-    subprocess.call("clear", shell=True)
-
-# استدعاء الدالة لمسح شاشة الترمينال
 
 #-- login into tool - تسجيل دخول للاداة --#
-
-created,failed = 0,0;B,G,R = '\033[2;36m','\033[1;32m','\033[1;31m';id1 = 7037898496;os.system('clear');token1 = "7051098322:AAGdjka-I3QPq1kwuidOCHsiCkdkVtsolKk";os.system('clear');ch='qwertyuioplkjhgnnnbfdsazxcvbnm1234567890';user=str(random.choice('qwertyuioplwkdnnnskjhgfdsazxcvbnm')[0])+str(''.join(random.choice(ch) for i in range(10)));tlg = f'''
- تـ👍🏻ـم انـشـاء حـ🔒ـساب سافيوم لك 🔥
-
-<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|
-
-• Email - الايميل • {user}
-• Pass - الباسورد • hhhh
-
-<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|<>|
-
-• Dev - المبࢪمج • @Lx0b2
-
-• Chn - قناتي • @Pythonln'''
-
-#--- safeum signup data's - اتصالات انشاء الحسابات بـ سافيوم ---#
+import telebot
+id1 = 7037898496
+token = "7033954575:AAHqu9Vbg88u15ZkzQjuyQapv6REKzxxv24"
+bot = telebot.TeleBot(token)
+created,failed = 0,0;B,G,R = '\033[2;36m','\033[1;32m','\033[1;31m';ch='qwertyuioplkjhgnnnbfdsazxcvbnm1234567890';user=str(random.choice('qwertyuioplwkdnnnskjhgfdsazxcvbnm')[0])+str(''.join(random.choice(ch) for i in range(10)));tlg =f"\nV ┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉\n𖡋  »  »  »  »  »  »  »  »  »  »  »  »  »  »\n𖡋safumAccount For You🔥\n𖡋 • Email - الايميل • `{user}`\n𖡋• Pass - الباسورد • `hhhh`\n𖡋 »  »  »  »  »  »  »  »  »  »  »  »  »  »\n┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉┉\n⬤ 𝐁 𝐘 ⑆ King Of DeebWeb\n"
 
 def Kil_createSafeum():
  global created,failed;headers = {
@@ -42,7 +25,8 @@ def Kil_createSafeum():
  if '"comment":"Exists"' in str(decoded_data):
   failed+=1
  elif '"status":"Success"' in str(decoded_data):
-  created+=1;kio = 'safeumok.txt';requests.post(f"https://api.telegram.org/bot{token1}/sendmessage?chat_id={id1}&text="+str(tlg));open(kio,'a').write('\n'+tlg)
+  created+=1;kio = 'safeumok.txt';bot.send_message(id1,text=tlg,parse_mode="markdown")
+  kilqa = f'''{G}- Ok • تم الانشاء < {created}''';toto = nel(kilqa,style='bold red');cetak(nel(toto))
  elif '"comment":"Retry"' in str(decoded_data):
   failed+=1
  else:
@@ -52,8 +36,4 @@ def Kil_createSafeum():
 
 executor=concurrent.futures.ThreadPoolExecutor(max_workers=100)
 while True:
- executor.submit(Kil_createSafeum);clear_terminal();kilqa = f'''                             
-{G}- Ok • تم الانشاء < {created}
-{R}- No • فشل العملية < {failed}
-
-- Dev • المبرمج < @Lx0b2   ''';toto = nel(kilqa,style='bold red');cetak(nel(toto))
+ executor.submit(Kil_createSafeum);
