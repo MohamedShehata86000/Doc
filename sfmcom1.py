@@ -13,12 +13,10 @@ created=0
 failed=0
 
 id1 = 7037898496
-print(('—'*25)+'\n• DeCoDe By @B_6_Q •\n'+('—'*25))
-os.system('clear')
+
 
 token = "7128223735:AAFEVCZg5vOdFsoe95cFF224J0TNfWIgcgA"
-print(('—'*25)+'\n• DeCoDe By @B_6_Q •\n'+('—'*25))
-os.system('clear')
+
 bot = telebot.TeleBot(token)
 G = '\033[1;32m'
 L = '\033[1;31m'
@@ -69,6 +67,3 @@ executor=concurrent.futures.ThreadPoolExecutor(max_workers=1000)
 
 while True:
  executor.submit(create)
- os.system('clear')
- print(G+'Created : '+str(created))
- print(L+'Failed : '+str(failed))
