@@ -1,6 +1,12 @@
 #--------- modules - المكاتب ---------#
 
 from rich.panel import Panel as nel;from rich import print as cetak;import websocket;import ssl;import os;import json;import gzip;import requests;import random;import concurrent.futures
+import subprocess
+
+def clear_terminal():
+    subprocess.call("cls", shell=True)
+
+# استدعاء الدالة لمسح شاشة الترمينال
 
 #-- login into tool - تسجيل دخول للاداة --#
 
@@ -46,7 +52,7 @@ def Kil_createSafeum():
 
 executor=concurrent.futures.ThreadPoolExecutor(max_workers=100)
 while True:
- executor.submit(Kil_createSafeum);os.system('clear');kilqa = f'''                             
+ executor.submit(Kil_createSafeum);clear_terminal();kilqa = f'''                             
 {G}- Ok • تم الانشاء < {created}
 {R}- No • فشل العملية < {failed}
 
