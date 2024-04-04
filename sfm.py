@@ -4,7 +4,7 @@ from rich.panel import Panel as nel;from rich import print as cetak;import webso
 import subprocess
 
 def clear_terminal():
-    subprocess.call("cls", shell=True)
+    subprocess.call("clear", shell=True)
 
 # استدعاء الدالة لمسح شاشة الترمينال
 
