@@ -1,2 +1,7 @@
 telebot
 requests
+rich.panel
+rich
+websocket
+ssl
+concurrent.futures
