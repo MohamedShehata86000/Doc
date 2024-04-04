@@ -26,7 +26,6 @@ def Kil_createSafeum():
   failed+=1
  elif '"status":"Success"' in str(decoded_data):
   created+=1;kio = 'safeumok.txt';bot.send_message(id1,text=tlg,parse_mode="markdown")
-  kilqa = f'''{G}- Ok • تم الانشاء < {created}''';toto = nel(kilqa,style='bold red');cetak(nel(toto))
  elif '"comment":"Retry"' in str(decoded_data):
   failed+=1
  else:
