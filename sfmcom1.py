@@ -77,9 +77,9 @@ data={
 	
 	"token":ft,
 	
-	"username":"Alaa99986",
+	"username":"Sheka999",
 	
-	"password":"Aa86700@@",
+	"password":"Ss86700@@",
 	
 	"recaptcha":""
 	}
@@ -88,7 +88,7 @@ print(r)
 u=r['data']['url']
 ######### insta.Likke #####
 def Like4like():
-	time.sleep(1)
+	time.sleep(3)
 	url2="https://www.like4like.org/api/get-user-info.php"
 	r2=s.get(url2).text	
 	#print(r2)
@@ -110,7 +110,7 @@ def Like4like():
 	#url to.get start
 	urlgetstart=f"https://www.like4like.org/api/start-task.php?idzad={idlinka}&vrsta=like&idcod={idzad}&feature=instagramlik&_=1676272662212"
 	rg=s.get(urlgetstart).text
-	time.sleep(1)
+	time.sleep(2)
 	#print(rg)
 	#finlly post
 	urlpost="https://www.like4like.org/api/validate-task.php"
@@ -135,6 +135,7 @@ def Like4like():
 	"version":""
 	
 	}
+	time.sleep(3)
 	rr=s.post(urlpost,data=datapost).json()
 	S=rr["success"]
 	Balance=rr["data"]["credits"]
@@ -146,6 +147,6 @@ while True:
 	try:
 		
 		Like4like()
-		time.sleep(1)
+		time.sleep(10)
 	except:pass
 ######## Facebook profile Follow ########
