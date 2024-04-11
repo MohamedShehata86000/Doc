@@ -38,60 +38,61 @@ print(random.choice([F, B, R, G, Y, Bl, P, C, W, PN]) + """
 #######.Log In #######
 ####token####
 s = requests.Session()	
-urlt=("https://www.like4like.org/login/")
-t=s.get(urlt).text
-token_pattern = r'token=(.*?)"'
-token_match = re.search(token_pattern, t)
-if token_match:
-	ft = token_match.group(1)
-	print(ft)
-else:
-	print("Token not found.")
-url="https://www.like4like.org/api/login.php"
-hd={
-	"Host":"www.like4like.org",
-	"content-length":"130",
-	"accept":"application/json, text/javascript, */*; q=0.01",
-	"content-type":"application/x-www-form-urlencoded; charset=UTF-8",
-	"x-requested-with":"XMLHttpRequest",
-	"sec-ch-ua-mobile":"?1",
-	"user-agent":"Mozilla/5.0 (Linux; Android 11; BASIC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
-	"sec-ch-ua-platform":"Android",
-	"origin":"https://www.like4like.org",
-	"sec-fetch-site":"same-origin",
-	"sec-fetch-mode":"cors",
-	"sec-fetch-dest":"empty",
-	"referer":"https://www.like4like.org/login/",
-	
-	"accept-encoding":"gzip, deflate, br",
-	"accept-language":"ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7",
-#	"cookie":"_gid=GA1.2.655652340.1676265072",
-	#"cookie":"PHPSESSID=ud20gkaru0h2610gqcba6dpahf",
-	#"cookie":"_gat_gtag_UA_21175192_9=1",
-	#"cookie":"_ga_DVWFX221E1=GS1.1.1676265072.4.1.1676266775.0.0.0",
-#	"cookie":"_ga=GA1.1.1679109111.1676127906",
-	}
-data={
-	
-	#"time":"1676266774",
-	
-	"token":ft,
-	
-	"username":"Sheka999",
-	
-	"password":"Ss86700@@",
-	
-	"recaptcha":""
-	}
-r=s.post(url,headers=hd,data=data).json()
-print(r)
-u=r['data']['url']
 ######### insta.Likke #####
 def Like4like():
+	urlt=("https://www.like4like.org/login/")
+	t=s.get(urlt).text
+	token_pattern = r'token=(.*?)"'
+	token_match = re.search(token_pattern, t)
+	if token_match:
+		ft = token_match.group(1)
+		print(ft)
+	else:
+		print("Token not found.")
+	url="https://www.like4like.org/api/login.php"
+	hd={
+		"Host":"www.like4like.org",
+		"content-length":"130",
+		"accept":"application/json, text/javascript, */*; q=0.01",
+		"content-type":"application/x-www-form-urlencoded; charset=UTF-8",
+		"x-requested-with":"XMLHttpRequest",
+		"sec-ch-ua-mobile":"?1",
+		"user-agent":"Mozilla/5.0 (Linux; Android 11; BASIC) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Mobile Safari/537.36",
+		"sec-ch-ua-platform":"Android",
+		"origin":"https://www.like4like.org",
+		"sec-fetch-site":"same-origin",
+		"sec-fetch-mode":"cors",
+		"sec-fetch-dest":"empty",
+		"referer":"https://www.like4like.org/login/",
+		
+		"accept-encoding":"gzip, deflate, br",
+		"accept-language":"ar-EG,ar;q=0.9,en-US;q=0.8,en;q=0.7",
+	#	"cookie":"_gid=GA1.2.655652340.1676265072",
+		#"cookie":"PHPSESSID=ud20gkaru0h2610gqcba6dpahf",
+		#"cookie":"_gat_gtag_UA_21175192_9=1",
+		#"cookie":"_ga_DVWFX221E1=GS1.1.1676265072.4.1.1676266775.0.0.0",
+	#	"cookie":"_ga=GA1.1.1679109111.1676127906",
+		}
+	data={
+		
+		#"time":"1676266774",
+		
+		"token":ft,
+		
+		"username":"Sheka999",
+		
+		"password":"Ss86700@@",
+		
+		"recaptcha":""
+		}
+	r=s.post(url,headers=hd,data=data).json()
+	print(r)
+	u=r['data']['url']
 	time.sleep(3)
 	url2="https://www.like4like.org/api/get-user-info.php"
 	r2=s.get(url2).text	
 	#print(r2)
+	time.sleep(1)
 	z=s.get("https://www.like4like.org/earn-credits.php?feature=instagramlik")
 	time.sleep(1)
 	url3="https://www.like4like.org/api/get-tasks.php?feature=instagramlik"
@@ -147,6 +148,6 @@ while True:
 	try:
 		
 		Like4like()
-		time.sleep(10)
+		time.sleep(30)
 	except:pass
 ######## Facebook profile Follow ########
