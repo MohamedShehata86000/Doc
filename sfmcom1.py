@@ -40,6 +40,7 @@ print(random.choice([F, B, R, G, Y, Bl, P, C, W, PN]) + """
 s = requests.Session()	
 ######### insta.Likke #####
 def Like4like():
+	time.sleep(30)
 	urlt=("https://www.like4like.org/login/")
 	t=s.get(urlt).text
 	token_pattern = r'token=(.*?)"'
