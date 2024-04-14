@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 # انضر لها وكأنها قمر يدور امامي فتأخذ قلبي وتكسره 
 User_Agent=[]
 
-bot = telebot.TeleBot("6595541927:AAGNKnX2qT_HFn-l0aN2UpydTbCqWWNFbyE")
+bot = telebot.TeleBot("6766017890:AAE74v_5JlgI-4SfW67UJBNURuEbIgxWhgI")
 L7N1 = types.InlineKeyboardButton(text ="Click To Start ⚡",callback_data = "L7N1")
 L7N_2 = types.InlineKeyboardButton(text ="Programmer",url="t.me/g_4_q")
 
