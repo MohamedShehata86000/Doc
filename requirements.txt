@@ -66,3 +66,4 @@ websocket-client==1.7.0
 wget==3.2
 wheel==0.41.2
 wrapt==1.15.0
+bs4
