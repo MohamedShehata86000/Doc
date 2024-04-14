@@ -57,6 +57,7 @@ def check(message,id):
     CP =0
     ERORR=0
     while True:
+	time.sleep(3)
     	g4q = random.choice(User_Agent)
     	Num = random.choice(["0770","0784","0771","0771","0772","0775","0773","0774","0782"])
     	user='1234567890'
