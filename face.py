@@ -4,6 +4,7 @@ import sys
 import telebot
 from telebot import types
 from concurrent.futures import ThreadPoolExecutor
+import time
 # انضر لها وكأنها قمر يدور امامي فتأخذ قلبي وتكسره 
 User_Agent=[]
 
@@ -57,7 +58,7 @@ def check(message,id):
     CP =0
     ERORR=0
     while True:
-	time.sleep(3)
+    	time.sleep(2)
     	g4q = random.choice(User_Agent)
     	Num = random.choice(["0770","0784","0771","0771","0772","0775","0773","0774","0782"])
     	user='1234567890'
