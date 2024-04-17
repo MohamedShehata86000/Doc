@@ -138,6 +138,6 @@ def repeat():
 while True:
     try:
         repeat()
-        time.sleep(30)
+        time.sleep(3)
 
     except:pass
