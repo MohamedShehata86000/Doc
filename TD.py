@@ -1,6 +1,6 @@
 import requests
 from my_fake_useragent import UserAgent
-
+import time
 x = UserAgent(family="chrome")
 U = x.random()
 import random
@@ -138,4 +138,6 @@ def repeat():
 while True:
     try:
         repeat()
+        time.sleep(120)
+
     except:pass
