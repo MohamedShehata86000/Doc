@@ -110,7 +110,7 @@ for i in range(len(filtered_lines) - 1):
 					bot1.send_message(id1, response1,parse_mode='none')
 		elif "use_stripe_sdk" in response1:
 			print("susibtable"+f"{c}")
-			#bot1.send_message(id1,c+"\n susbtiable")
+			bot1.send_message(id1,c+"\n susbtiable")
 		else:
 					bot1.send_message(id1,c)
 					bot1.send_message(id1, response1,parse_mode='none')
