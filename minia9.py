@@ -139,7 +139,7 @@ def dow(message):
 				if 'عفوا اسم المستخدم مسجل من قبل' in str(responsec.json()):
 					bot.send_message(message.chat.id,text="الرقم السري أو الرقم القومي خطأ ",reply_markup=markup)
 					print("error.pass")
-				elif	"30210012404408" == Id or "30108012406487" == Id or "30204182401764" == Id:
+				elif	"30210012404408" == Id or "30108012406487" == Id or "30204182401764" == Id or "30202022402249" == Id:
 					bot.send_message(message.chat.id,text="هذا  الحساب محظور تواصل مع المطور",reply_markup=markup)
 					
 				else:
