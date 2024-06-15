@@ -59,7 +59,7 @@ import re
 
 import random
 def ul():
-    u=["https://t.me/tasapqta3at","https://t.me/M_S_H_VIP1","https://t.me/M_S_H_VIP4","https://t.me/M_S_H_VIP3","https://t.me/Matrex_VIP1","https://t.me/Anghamiplussss","https://t.me/U_K_I_N_G"]
+    u=["https://t.me/tasapqta3at","https://t.me/M_S_H_VIP1","https://t.me/M_S_H_VIP4","https://t.me/M_S_H_VIP3","https://t.me/Matrex_VIP1","https://t.me/Anghamiplussss","https://t.me/U_K_I_N_G","https://t.me/VS_CP","https://t.me/CC_HE","https://t.me/CK_CT","https://t.me/V_I_CH","https://t.me/VI_CD","https://t.me/CC1_VIP","https://t.me/PY_CV","https://t.me/U_K_I_N_G"]
     url=random.choice(u)
     return url
 
